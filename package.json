@@ -1,0 +1,59 @@
+{
+  "name": "documentdb-passport-boilerplate",
+  "description": "Node.js Starter site for Azure using DocumentDB, Passport and bootstrap",
+  "main": "./webserver.js",
+  "author": {
+    "name": "Luke Van Horn"
+  },
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukevanhorn/documentdb-passport-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukevanhorn/documentdb-passport-boilerplate/issues"
+  },
+  "dependencies": {
+    "express": "~4.2.0",
+    "static-favicon": "~1.0.0",
+    "express-session-documentdb": "*",
+    "express-session": "*",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "jade": "~1.3.0",
+    "nconf": "~0.6.7",
+    "crypto": "0.0.3",
+    "azure": ">= 0.8.1",
+    "passport": "~0.2.0",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2",
+    "passport-facebook": "~1.0.2",
+    "passport-github": "~0.1.5",
+    "passport-google-oauth": "~0.1.5",
+    "passport-linkedin": "~0.1.3",
+    "connect-flash": "~0.1.1",
+    "express-session-azure": ">= 0.2.3",
+    "async": ">= 0.2.10",
+    "moment": "*",
+    "socket.io": ">= 1.0.0",
+    "marked-engine": "*",
+    "documentdb": "*"
+  },
+  "keywords": [
+    "azure",
+	"documentdb",
+    "passport",
+    "express",
+    "session"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "engine": {
+    "node": ">=10.21"
+  },
+  "homepage": "https://github.com/lukevanhorn/documentdb-passport-boilerplate"
+}

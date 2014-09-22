@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Setup</title>
+</head>
+<body>
+    <h1>Site Setup</h1>
+
+    <p>Base URL
+        <input type="text" id="siteBaseUrl" name="siteBaseUrl" placeholder="http://mysite.azurewebsites.net" />
+    </p>
+
+    <p>Site Name: 
+        <input type="text" id="siteName" name="siteName" placeholder="My Site" />
+    </p>
+
+    <h1>OAuth Setup</h1>
+
+    <h1>Google</h1>
+
+    <p>
+        ID: <input type="text" id="googleClientId" name="googleClientId" />
+        Secret: <input type="text" id="googleClientSecret" name="googleClientSecret" />
+    </p>
+
+    <h2>Facebook</h2>
+
+    <p>
+        ID: <input type="text" id="facebookClientId" name="facebookClientId" />
+        Secret: <input type="text" id="facebookClientSecret" name="facebookClientSecret" />
+    </p>
+
+    <h2>Github</h2>
+
+    <p>
+        ID: <input type="text" id="GithubClientId" name="GithubClientId" />
+        Secret: <input type="text" id="GithubClientSecret" name="GithubClientSecret" />
+    </p>
+
+    <h2>Linked-In</h2>
+
+    <p>
+        ID: <input type="text" id="linkedInClientId" name="linkedInClientId" />
+        Secret: <input type="text" id="linkedInClientSecret" name="linkedInClientSecret" />
+    </p>
+
+    <p><button onclick='javascript: saveOauth();'>Save</button></p>
+</body>
+</html>
