@@ -3,7 +3,7 @@
     window.ajax = {
         socket: null,
 
-        waitDiv: $('<div class="modal fade" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-body"><div class="clearfix"><div class="pull-left"><h3>Please Wait...</h3></div> <div class="pull-right"><img src="/images/load.gif" /></div></div></div></div></div></div>'),
+        waitDiv: $('<div class="modal" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-body"><div class="clearfix"><div class="pull-left"><h3>Please Wait...</h3></div> <div class="pull-right"><img src="/images/load.gif" /></div></div></div></div></div></div>'),
 
         showWait: function() {
             var self = this;
