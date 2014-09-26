@@ -16,11 +16,11 @@
 
 	$("#logoutLink").on('click', function (e) {   
 		e.preventDefault();
-        $("#logoutLink").disable();
+        $("#logoutLink").prop('disabled', true);
         window.ajax.post('/auth/signout', null, true, function success() {
                   
 		}, function error(data) {
-            $("#logoutLink").enable();
+            $("#logoutLink").prop('disabled', false);
 		});
 
 	});
