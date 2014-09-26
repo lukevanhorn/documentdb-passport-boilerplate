@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <title>My Site</title>
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />	
+	<link rel="stylesheet" type="text/css" href="/css/offcanvas.css" />
+
+    <!-- libs -->
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>    
+    <script src='https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+
+    <!-- app -->
+	<script src='/js/app/ajax.js'></script>
+	<script src='/js/app/main.js'></script>
+
+</head>
+<body>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">My Site</div>
+                <button type="button" id="navButton" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="homeLink" href="/">Home</a></li>
+                    <li><a id="docLink" href="#/documentation">Documentation</a></li>
+                    <li><a id="logoutLink" href="#logout">Sign Out</a></li>
+                    <li><a id="loginLink" href="#loginForm">Sign In</a></li>
+                    <li><a id="registerLink" href="#registerForm">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div id="content-wrapper">
+		<div id="content">
+            <div id="main-content" class="row">
+                <div class="col-sm-12">
+                    <h3>Welcome to the site</h3>
+                </div>
+            </div>
+            <div id="auth-content" class="row">
+                <div class="col-xs-1 col-sm-3 col-md-4 col-lg-4"></div>
+				<div class="col-xs-10 col-sm-6 col-md-4 col-lg-3">
+					<div id="loginForm">
+						<div id="loginError" class="error"></div>
+						<form role="form">
+							<fieldset>
+                                <legend>Log in to Your Account.</legend>
+									<div class="form-group clearfix">
+                                        <input id="loginEmail" type="text" name="email" placeholder="email" class="pull-left"/>
+									</div>
+									<div class="form-group clearfix">
+                                        <input id="loginPassword" type="password" name="password" placeholder="password" class="pull-left" />
+                                        <input id="loginButton" type="submit" value="Login" class="pull-right" />
+									</div>
+									<div class="form-group">
+                                        <a href="/auth/recover" class="pull-left">Forgot Password?</a>
+									</div>								    
+							</fieldset>
+						</form>
+					</div>
+					<div id="registerForm" style="display: none;">
+						<div id="registerError" class="error"></div>
+						<form role="form">
+							<fieldset>
+                                <legend>Register</legend>
+								<div class="form-group">
+                                    <input id="registerEmail" type="text" name="email" placeholder="email" />
+								</div>
+								<div class="form-group">
+                                    <input id="registerPassword" type="password" name="password" placeholder="password" />
+								</div>
+								<div class="form-group">
+                                    <input id="registerConfirm" type="password" name="confirmpassword" placeholder="confirm password" />
+                                    <input id="registerButton" type="submit" value="Register" class="pull-right" />
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div id="socialLoginForm" class="social">
+						<h5 class="text-center">- Or sign in using -</h5>
+						<ul class="list-inline text-center">
+							<li><a href="/auth/facebook" class="btn btn-sm btn-primary"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="/auth/google" class="btn btn-sm btn-danger"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="/auth/twitter" class="btn btn-sm btn-info"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="/auth/github" class="btn btn-sm btn-warning"><i class="fa fa-github"></i></a></li>
+							<li><a href="/auth/linkedin" class="btn btn-sm btn-primary"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+                <div class="col-xs-1 col-sm-3 col-md-4 col-lg-5"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>	

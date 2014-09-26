@@ -17,7 +17,7 @@
 
     <!-- app -->
 	<script src='/js/app/ajax.js'></script>
-	<script src='/js/app/main.js'></script>
+	<script src='/js/app/index.js'></script>
 
 </head>
 <body>
@@ -37,8 +37,6 @@
                     <li><a id="homeLink" href="/">Home</a></li>
                     <li><a id="docLink" href="#/documentation">Documentation</a></li>
                     <li><a id="logoutLink" href="#logout">Sign Out</a></li>
-                    <li><a id="loginLink" href="#loginForm">Sign In</a></li>
-                    <li><a id="registerLink" href="#registerForm">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -50,58 +48,6 @@
                     <h3>Welcome to the site</h3>
                 </div>
             </div>
-            <div id="auth-content" class="row">
-                <div class="col-xs-1 col-sm-3 col-md-4 col-lg-4"></div>
-				<div class="col-xs-10 col-sm-6 col-md-4 col-lg-3">
-					<div id="loginForm">
-						<div id="loginError" class="error"></div>
-						<form role="form">
-							<fieldset>
-                                <legend>Log in to Your Account.</legend>
-									<div class="form-group clearfix">
-                                        <input id="loginEmail" type="text" name="email" placeholder="email" class="pull-left"/>
-									</div>
-									<div class="form-group clearfix">
-                                        <input id="loginPassword" type="password" name="password" placeholder="password" class="pull-left" />
-                                        <input id="loginButton" type="submit" value="Login" class="pull-right" />
-									</div>
-									<div class="form-group">
-                                        <a href="/auth/recover" class="pull-left">Forgot Password?</a>
-									</div>								    
-							</fieldset>
-						</form>
-					</div>
-					<div id="registerForm" style="display: none;">
-						<div id="registerError" class="error"></div>
-						<form role="form">
-							<fieldset>
-                                <legend>Register</legend>
-								<div class="form-group">
-                                    <input id="registerEmail" type="text" name="email" placeholder="email" />
-								</div>
-								<div class="form-group">
-                                    <input id="registerPassword" type="password" name="password" placeholder="password" />
-								</div>
-								<div class="form-group">
-                                    <input id="registerConfirm" type="password" name="confirmpassword" placeholder="confirm password" />
-                                    <input id="registerButton" type="submit" value="Register" class="pull-right" />
-								</div>
-							</fieldset>
-						</form>
-					</div>
-					<div id="socialLoginForm" class="social">
-						<h5 class="text-center">- Or sign in using -</h5>
-						<ul class="list-inline text-center">
-							<li><a href="/auth/facebook" class="btn btn-sm btn-primary"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="/auth/google" class="btn btn-sm btn-danger"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="/auth/twitter" class="btn btn-sm btn-info"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="/auth/github" class="btn btn-sm btn-warning"><i class="fa fa-github"></i></a></li>
-							<li><a href="/auth/linkedin" class="btn btn-sm btn-primary"><i class="fa fa-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-                <div class="col-xs-1 col-sm-3 col-md-4 col-lg-5"></div>
-			</div>
 		</div>
 	</div>
 </body>

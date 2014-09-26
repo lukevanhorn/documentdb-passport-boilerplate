@@ -33,7 +33,8 @@ module.exports = function(passport) {
                     return next(err); 
                 }
 
-                return res.json(200, user);
+                //return res.json(200, user);
+                return res.redirect('/');
             });
         })(req, res, next);
     };
@@ -52,7 +53,8 @@ module.exports = function(passport) {
                     return next(err); 
                 }
 
-                return res.send(200);
+                //return res.send(200);
+                return res.redirect('/');
             });
         })(req, res, next);;
     });
@@ -73,7 +75,8 @@ module.exports = function(passport) {
 
     router.post('/signout', function(req, res, next){
         req.logout();
-        res.status(200).send({});
+        res.redirect('/');
+        //res.status(200).send({});
     });
 
     router.post('/signin', signin);
