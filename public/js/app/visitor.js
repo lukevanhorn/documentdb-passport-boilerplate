@@ -32,19 +32,6 @@ $(document).ready(function () {
 		updateScreen();
 	});
 
-	$("#logoutLink").on('click', function (e) {
-
-        window.ajax.post('/auth/signout', null, true, function success() {
-            window.user = null;
-            window.state = 'default';
-            updateScreen();
-		}, function error(data) {
-            alert(data || 'unknown error');
-		});
-
-		e.preventDefault();
-	});
-
 	$("#recoverLink").on('click', function (e) {
 		window.state = 'recover';
 		updateScreen();
@@ -114,13 +101,6 @@ $(document).ready(function () {
 			$('#registerError').html(data || 'unknown error');
 		});
 	});
-
-    window.ajax.getJSON('/user/me', null, true, function success(user){
-        window.user = user;
-        updateScreen();
-    }, function error(){
-        updateScreen();
-    });
 });
 
 
@@ -149,16 +129,6 @@ function updateScreen() {
             $("#auth-content").hide();
             $("#main-content").show();
 			break;
-	}
-
-    if(window.user) {
-        $("#loginLink").hide();
-        $("#registerLink").hide();
-        $("#logoutLink").show();
-    } else {
-        $("#loginLink").show();
-        $("#registerLink").show();
-        $("#logoutLink").hide();        
-    }
+	} 
 }
 

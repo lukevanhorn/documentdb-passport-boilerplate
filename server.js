@@ -27,9 +27,6 @@ app.engine('html', function (filePath, options, callback) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 
-//app.engine('md', marked.renderFile);
-//app.set('view engine', 'md');
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser('azure ermahgerd'));
 app.use(bodyParser.json());
@@ -55,6 +52,7 @@ if(siteConfig.initialized) {
 }
 
 app.use('/', require('./routes/default'));
+app.use('/', require('./routes/partial'));
 app.use('/config', require('./routes/config'));
 app.use('/user', require('./routes/user'));
 app.use('/admin', require('./routes/admin'));
