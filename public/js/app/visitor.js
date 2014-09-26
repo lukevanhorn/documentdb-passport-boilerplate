@@ -65,8 +65,7 @@ $(document).ready(function () {
 
 		window.ajax.post('/auth/signin', data, true, function success(user) {
             window.user = user;
-            window.state = 'default';
-            updateScreen();
+            window.location = "/";    
 		}, function error(data) {
 			$('#loginError').html(data.message || data || 'unknown error');
 		});
@@ -95,8 +94,7 @@ $(document).ready(function () {
             
 		window.ajax.post('/auth/register', data, true, function success(user) {
             window.user = user;
-            window.state = 'default';
-            updateScreen();
+            window.location = "/";    
 		}, function error(data) {
 			$('#registerError').html(data || 'unknown error');
 		});

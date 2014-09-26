@@ -18,7 +18,7 @@
 		e.preventDefault();
         $("#logoutLink").prop('disabled', true);
         window.ajax.post('/auth/signout', null, true, function success() {
-                  
+          window.location = "/";         
 		}, function error(data) {
             $("#logoutLink").prop('disabled', false);
 		});
