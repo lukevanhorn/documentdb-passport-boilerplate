@@ -54,7 +54,7 @@ module.exports = function(passport) {
 
                 return res.json(200, user);
             });
-        })(req, res, next);;
+        });
     });
 
     router.get('/remove', function(req, res, next) {
